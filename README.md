@@ -8,7 +8,7 @@ conferencing system, focusing on external device connectivity and video data pro
     - [x] Detect and list all connected video devices (e.g., integrated or external webcams)
     - [x] Provide functionality for users to select specific devices for the video conferencing session.
     - [x] Include a feature to check the connection status of the selected devices and notify the user if a device is disconnected.
-- [ ] Video Preview:
+- [x] Video Preview:
     - [x] Capture live video from the selected webcam and display it in a video preview window.
     - [x] Implement basic video processing, such as converting the video feed to grayscale or adding a simple filter.
 - [x] User Interface:
@@ -20,24 +20,6 @@ conferencing system, focusing on external device connectivity and video data pro
 - [ ] Implement a feature to record the video and audio streams and save them as separate files.
 - [ ] Use platform-specific libraries to handle video and audio processing efficiently (AVFoundation).
 
-### Submission Instructions
-To share the results of your work, please include the following:
-- Source Code:
-    - Provide all source code files in a structured format.
-    - Ensure the code is easy to understand.
-- Executable File(Optional):
-    - Share a compiled executable file for the platform(s) you developed the application on (MacOS).
-    - Ensure the executable can be run without additional configuration or dependencies.
-- README File:
-    - Include a README file with the following details:
-        - Instructions on how to run the application, including any prerequisites or dependencies.  
-        - An explanation of your approach and any challenges you encountered.
-- Demonstration(Optional):
-    - If possible, include a short video demonstrating the application in action (e.g., showing the device integration, a video preview, etc.).
-- Submission Method:
-    - Upload all required files to a GitHub repository or a cloud storage service (e.g., Google Drive, Dropbox, or OneDrive).
-    - Share the repository link or download link in your response.
-
 ### How to run
 - Open `.xcodeproj`.
 - In `Target` settings under `Signing & Capabilities` change `Team` and `Bundle Identifier` if needed.
@@ -48,7 +30,11 @@ To share the results of your work, please include the following:
 - Using `ObservableObject` instead of `@Observable` for sake of utilizing DI framework without any hassle.
 - Leaving documentation comments wherever i see fit or necessary.
 - Adding `print()` where handling errors and where appropriate.
+- No real error handling or presenting them to user.
 - Git history not preserved.
+- CaptureSession is rebuilt whenever devices change(probably more times than actually required)
+- If current selected device disconnects it will be replace with default one.
+- Audio devices presented for selection but not used as there is no such requirement.
 
 ### Challenges
 - Procrastination while doing this on the weekend in multiple session with long breaks in between.
